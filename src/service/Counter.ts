@@ -1,4 +1,4 @@
-export default class HelloWorldController {
+export default class {
     private _count: number;
 
     constructor(initialCount = 0) {

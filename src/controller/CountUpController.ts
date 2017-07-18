@@ -1,6 +1,9 @@
 import Counter from '../service/Counter'
+import {IController} from './IController'
 
-export default {
+type ControllerObject = {__name: string}
+
+const helloWorldController = <IController>{
     __name: 'HelloWorldController',
 
     __ready: (context) => {
@@ -12,3 +15,5 @@ export default {
         alert(this._counter.count);
     }
 };
+
+export default helloWorldController;
