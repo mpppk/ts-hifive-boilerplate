@@ -11,7 +11,13 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@types/jquery": "^3.2.9",
     "ts-loader": "^2.3.0",
     "webpack": "^3.3.0"
+  },
+  "dependencies": {
+    "@types/bootstrap": "^3.3.35",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
   }
 }
