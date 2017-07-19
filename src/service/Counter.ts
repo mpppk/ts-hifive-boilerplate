@@ -12,4 +12,8 @@ export default class {
     get count(): number {
         return this._count;
     }
+
+    reset() {
+        this._count = 0;
+    }
 }

@@ -1,19 +1,21 @@
 import Counter from '../service/Counter'
-import {IController} from './IController'
 
-type ControllerObject = {__name: string}
+const countUpController = {
+    __name: 'countUpController',
 
-const helloWorldController = <IController>{
-    __name: 'HelloWorldController',
-
-    __ready: (context) => {
+    __ready: function(context) {
         this._counter = new Counter();
     },
 
-    '#btn click': () => {
+    '#countUpBtn click': function() {
         this._counter.increment();
         alert(this._counter.count);
+    },
+
+    reset: function() {
+        this._counter.reset();
+        alert("reset!");
     }
 };
 
-export default helloWorldController;
+export default countUpController;
