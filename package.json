@@ -7,6 +7,7 @@
     "build": "webpack",
     "watch": "webpack --watch",
     "test": "nyc mocha",
+    "start": "webpack-dev-server",
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'"
   },
   "nyc": {
@@ -34,7 +35,8 @@
     "ts-loader": "^2.3.0",
     "ts-node": "^3.2.0",
     "tslint": "^5.5.0",
-    "webpack": "^3.3.0"
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
