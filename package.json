@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "test": "tsc && mocha"
+    "test": "tsc && mocha",
+    "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "chai": "^4.1.0",
     "mocha": "^3.4.2",
     "ts-loader": "^2.3.0",
+    "tslint": "^5.5.0",
     "webpack": "^3.3.0"
   },
   "dependencies": {
