@@ -5,18 +5,20 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "webpack --watch",
+    "test": "tsc && mocha"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@types/jquery": "^3.2.9",
+    "@types/mocha": "^2.2.41",
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2",
     "ts-loader": "^2.3.0",
     "webpack": "^3.3.0"
   },
   "dependencies": {
-    "@types/bootstrap": "^3.3.35",
     "bootstrap": "^3.3.7",
     "jquery": "^3.2.1"
   }
