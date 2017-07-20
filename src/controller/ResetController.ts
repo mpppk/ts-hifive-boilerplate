@@ -1,9 +1,9 @@
 const resetController = {
     __name: 'resetController',
 
-    '#resetBtn click': function() {
+    '#resetBtn click'() {
         this.trigger('resetCount');
-    }
+    },
 };
 
 export default resetController;

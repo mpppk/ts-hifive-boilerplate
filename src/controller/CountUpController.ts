@@ -1,21 +1,21 @@
-import Counter from '../service/Counter'
+import Counter from '../service/Counter';
 
 const countUpController = {
     __name: 'countUpController',
 
-    __ready: function(context) {
+    __ready(context) {
         this._counter = new Counter();
     },
 
-    '#countUpBtn click': function() {
+    '#countUpBtn click'() {
         this._counter.increment();
         alert(this._counter.count);
     },
 
-    reset: function() {
+    reset() {
         this._counter.reset();
-        alert("reset!");
-    }
+        alert('reset!');
+    },
 };
 
 export default countUpController;

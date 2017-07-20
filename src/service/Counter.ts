@@ -5,7 +5,7 @@ export default class {
         this._count = initialCount;
     }
 
-    increment() {
+    public increment() {
         this._count++;
     }
 
@@ -13,7 +13,7 @@ export default class {
         return this._count;
     }
 
-    reset() {
+    public reset() {
         this._count = 0;
     }
 }

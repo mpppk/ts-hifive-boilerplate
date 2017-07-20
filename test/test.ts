@@ -1,10 +1,10 @@
-import Counter from "../src/service/Counter";
-import  'mocha';
 import { expect } from 'chai';
+import 'mocha';
+import Counter from '../src/service/Counter';
 
-describe('Counter', function() {
-    describe('#increment()', function() {
-        it('should increment count', function() {
+describe('Counter', () => {
+    describe('#increment()', () => {
+        it('should increment count', () => {
             const counter = new Counter();
             expect(counter.count).to.equal(0);
             counter.increment();
