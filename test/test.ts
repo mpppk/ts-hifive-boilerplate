@@ -1,14 +1,14 @@
-import { expect } from 'chai';
 import 'mocha';
+import * as assert from 'power-assert';
 import Counter from '../src/service/Counter';
 
 describe('Counter', () => {
     describe('#increment()', () => {
         it('should increment count', () => {
             const counter = new Counter();
-            expect(counter.count).to.equal(0);
+            assert(counter.count === 0);
             counter.increment();
-            expect(counter.count).to.equal(1);
+            assert(counter.count === 2);
         });
     });
 });

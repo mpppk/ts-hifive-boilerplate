@@ -1,4 +1,5 @@
 --compilers ts-node/register
 --require source-map-support/register
+--compilers ts:espower-typescript/guess
 --recursive
 test/**/*.ts
