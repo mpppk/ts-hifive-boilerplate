@@ -22,3 +22,4 @@ test:
   stage: test
   script:
     - npm test
+  coverage: '/All files .* (\d+.?\d)/'
