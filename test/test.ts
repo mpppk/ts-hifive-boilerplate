@@ -8,7 +8,7 @@ describe('Counter', () => {
             const counter = new Counter();
             assert(counter.count === 0);
             counter.increment();
-            assert(counter.count === 2);
+            assert(counter.count === 1);
         });
     });
 });
