@@ -25,6 +25,8 @@ $ npm start
 
 `npm start` serve your application on `http://localhost:8080` and updates the browser on changes.    
 
+![](imgs/webpack-dev-server.png)
+
 #### Ref
 * [webpack-dev-server](https://github.com/webpack/webpack-dev-server)  
 
@@ -35,6 +37,12 @@ $ npm test
 ```
 
 `npm test` execute the test of `test/**/*.ts` and output the coverage.
+
+![](imgs/test_and_coverage.png)
+
+If test failed, detailed error message will be displayed.
+
+![](imgs/test_fail.png)
 
 #### Ref
 * [mocha](https://mochajs.org)
@@ -49,6 +57,8 @@ $ npm run lint
 
 `npm run lint` execute linting.
 
+![](imgs/tslint.png)
+
 #### Ref
 * [tslint](https://palantir.github.io/tslint/)
 
@@ -60,6 +70,10 @@ $ npm run doc
 
 `npm run doc` generate documentation to `docs/`.
 
+![](imgs/tsdoc_command.png)
+
+![](imgs/tsdoc.png)
+
 #### Ref
 * [typedoc](https://github.com/TypeStrong/typedoc)
 
@@ -67,8 +81,15 @@ $ npm run doc
 * editorconfig
 
 ## SaaS Integration
-* Circle CI
+### Circle CI
+
+![](imgs/circle_ci.png)
+
+### Codacy
+
+![](imgs/codacy.png)
 
 ## GitLab Integration
-* GitLab CI
-* coverage
+* GitLab CI & Coverage
+
+![](imgs/gitlab_ci.png)
