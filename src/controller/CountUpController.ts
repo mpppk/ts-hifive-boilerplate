@@ -2,10 +2,7 @@ import Counter from '../service/Counter';
 
 const countUpController = {
     __name: 'countUpController',
-
-    __ready(context) {
-        this._counter = new Counter();
-    },
+    _counter: new Counter(),
 
     '#countUpBtn click'() {
         this._counter.increment();

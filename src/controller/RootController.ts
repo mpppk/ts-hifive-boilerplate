@@ -1,3 +1,4 @@
+import * as JQuery from 'jquery';
 import countUpController from './CountUpController';
 import resetController from './ResetController';
 
@@ -6,7 +7,7 @@ const rootController = {
     _countUpController: countUpController,
     _resetController: resetController,
 
-    '{rootElement} resetCount'(context, $el) {
+    '{rootElement} resetCount'(context: any, $el: JQuery) {
         this._countUpController.reset();
     },
 };
