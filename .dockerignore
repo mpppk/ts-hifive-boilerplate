@@ -1,0 +1,9 @@
+docs/
+node_modules/
+dist/
+.nyc_output/
+src/**/*.js
+src/**/*.map
+test/**/*.js
+test/**/*.map
+

@@ -77,6 +77,14 @@ $ npm run doc
 #### Ref
 * [typedoc](https://github.com/TypeStrong/typedoc)
 
+## Docker
+
+```Shell
+$ docker build -t tshifive .
+$ docker run -it -p 8080:8080 tshifive
+# Now your application is served on http://localhost:8080
+```
+
 ## Tools
 * editorconfig
 
