@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   devtool: 'inline-source-map',
   entry: './src/app.ts',
@@ -13,5 +15,15 @@ module.exports = {
       // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
       { test: /\.tsx?$/, loader: 'ts-loader' }
     ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin({  // Also generate a index.html
+      filename: 'index.html',
+      template: 'src/assets/index.html'
+    })
+  ],
+  devServer: {
+    historyApiFallback: true,
+    contentBase: 'dist'
   }
 };
