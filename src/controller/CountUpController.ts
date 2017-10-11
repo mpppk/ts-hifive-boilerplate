@@ -1,7 +1,14 @@
 import Counter from '../service/Counter';
+import {IController} from './IController';
 const counterTemplate: (o?: object) => string = require('../assets/counter.ejs'); // tslint:disable-line no-var-requires
 
-const countUpController = {
+interface ICountUpController extends IController {
+    _counter: Counter;
+    '#countUpBtn click': any;
+    reset: any;
+}
+
+const countUpController: ICountUpController = {
     __name: 'countUpController',
     _counter: new Counter(),
 
