@@ -17,9 +17,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({  // Also generate a index.html
+    new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: 'src/assets/index.html'
+      template: '!!ejs-compiled-loader!src/assets/index.ejs'
     })
   ],
   devServer: {
