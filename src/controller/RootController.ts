@@ -3,6 +3,11 @@ import countUpController from './CountUpController';
 import resetController from './ResetController';
 
 const rootController = {
+    __meta: {
+        _countUpController: {
+            rootElement: '#counterContainer',
+        },
+    },
     __name: 'rootController',
     _countUpController: countUpController,
     _resetController: resetController,

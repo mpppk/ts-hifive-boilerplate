@@ -1,4 +1,5 @@
 import Counter from '../service/Counter';
+const counterTemplate: (o?: object) => string = require('../assets/counter.ejs'); // tslint:disable-line no-var-requires
 
 const countUpController = {
     __name: 'countUpController',
@@ -12,6 +13,10 @@ const countUpController = {
     reset() {
         this._counter.reset();
         alert('reset!');
+    },
+
+    __ready(context: any) {
+        $(this.rootElement).append(counterTemplate());
     },
 };
 
