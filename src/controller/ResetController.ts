@@ -1,7 +1,8 @@
-import {IController} from './IController';
+import {EventCallback} from '../h5/IContext';
+import {IController} from '../h5/IController';
 
-interface IResetController extends IController {
-    '#resetBtn click': any;
+export interface IResetController extends IController {
+    '#resetBtn click': EventCallback;
 }
 
 const resetController: IResetController = {
