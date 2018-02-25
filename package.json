@@ -47,7 +47,7 @@
     "typedoc": "^0.10.0",
     "typescript": "^2.4.2",
     "webpack": "^3.3.0",
-    "webpack-dev-server": "^2.5.1"
+    "webpack-dev-server": "^3.0.0"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
