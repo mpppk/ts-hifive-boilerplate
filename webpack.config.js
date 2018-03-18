@@ -1,10 +1,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   devtool: 'inline-source-map',
   entry: './src/app.ts',
   output: {
-    filename: 'dist/bundle.js'
+    path: __dirname + '/dist',
+    filename: 'bundle.js'
   },
   resolve: {
     // Add `.ts` and `.tsx` as a resolvable extension.
@@ -18,13 +20,14 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: '!!ejs-compiled-loader!src/assets/index.ejs'
+      filename: 'dist/index.html',
+      template: 'src/assets/index.ejs'
     })
   ],
   devServer: {
     historyApiFallback: true,
-    contentBase: 'dist'
+    contentBase: 'dist/'
   }
 };
