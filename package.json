@@ -34,7 +34,7 @@
     "chai": "^4.1.0",
     "ejs-compiled-loader": "^1.1.0",
     "espower-typescript": "^8.0.2",
-    "html-webpack-plugin": "^2.30.1",
+    "html-webpack-plugin": "^3.0.0",
     "isparta": "^4.0.0",
     "mocha": "^5.0.0",
     "nyc": "^11.0.3",
