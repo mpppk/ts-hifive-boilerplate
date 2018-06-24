@@ -33,7 +33,7 @@
     "@types/power-assert": "^1.4.29",
     "chai": "^4.1.0",
     "ejs-compiled-loader": "^1.1.0",
-    "espower-typescript": "^8.0.2",
+    "espower-typescript": "^9.0.0",
     "html-webpack-plugin": "^3.0.0",
     "isparta": "^4.0.0",
     "mocha": "^5.0.0",
