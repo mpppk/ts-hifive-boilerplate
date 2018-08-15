@@ -27,7 +27,7 @@
   "author": "mpppk",
   "license": "MIT",
   "devDependencies": {
-    "@types/jquery": "^3.2.13",
+    "@types/jquery": "^3.3.6",
     "@types/mocha": "^2.2.41",
     "@types/node": "^9.3.0",
     "@types/power-assert": "^1.4.29",
