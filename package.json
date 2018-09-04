@@ -6,42 +6,43 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "test": "nyc mocha",
+    "test": "jest",
     "doc": "typedoc --out ./docs -m \"amd\"",
     "start": "webpack-dev-server",
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'"
   },
-  "nyc": {
-    "extension": [
-      ".ts",
-      ".tsx"
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
     ],
-    "exclude": [
-      "**/*.d.ts"
-    ],
-    "require": [
-      "ts-node/register"
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "**/__tests__/*.+(ts|tsx|js)"
     ]
   },
   "keywords": [],
   "author": "mpppk",
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^23.3.1",
     "@types/jquery": "^3.2.13",
     "@types/mocha": "^2.2.41",
     "@types/node": "^10.0.3",
-    "@types/power-assert": "^1.4.29",
-    "chai": "^4.1.0",
     "ejs-compiled-loader": "^1.1.0",
-    "espower-typescript": "^9.0.0",
     "html-webpack-plugin": "^3.0.0",
-    "isparta": "^4.0.0",
-    "mocha": "^5.0.0",
-    "nyc": "^12.0.1",
-    "power-assert": "^1.4.4",
-    "ts-loader": "^3.0.0",
+    "jest": "^23.5.0",
     "source-map-support": "^0.5.0",
-    "ts-node": "^4.0.0",
+    "ts-jest": "^23.1.4",
+    "ts-loader": "^3.0.0",
     "tslint": "^5.5.0",
     "typedoc": "^0.10.0",
     "typescript": "^2.4.2",
