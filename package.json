@@ -10,7 +10,9 @@
     "test": "jest",
     "doc": "typedoc --out ./docs -m \"amd\"",
     "start": "webpack-dev-server",
-    "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'"
+    "lint": "npm run pretty-quick && tslint -c tslint.json 'src/**/*.ts' 'src/**/*.tsx' 'test/**/*.ts' --fix",
+    "pretty-quick": "pretty-quick",
+    "precommit": "pretty-quick --staged"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -40,7 +42,10 @@
     "@types/node": "^10.0.3",
     "ejs-compiled-loader": "^1.1.0",
     "html-webpack-plugin": "^3.0.0",
+    "husky": "^0.14.3",
     "jest": "^23.5.0",
+    "prettier": "^1.14.2",
+    "pretty-quick": "^1.6.0",
     "source-map-support": "^0.5.0",
     "ts-jest": "^23.1.4",
     "ts-loader": "^4.5.0",
