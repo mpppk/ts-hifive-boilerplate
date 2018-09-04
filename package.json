@@ -29,7 +29,7 @@
   "devDependencies": {
     "@types/jquery": "^3.2.13",
     "@types/mocha": "^2.2.41",
-    "@types/node": "^9.3.0",
+    "@types/node": "^10.0.3",
     "@types/power-assert": "^1.4.29",
     "chai": "^4.1.0",
     "ejs-compiled-loader": "^1.1.0",
