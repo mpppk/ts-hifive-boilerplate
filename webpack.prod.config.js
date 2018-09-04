@@ -1,8 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
-  devtool: 'inline-source-map',
+  mode: 'production',
   entry: './src/app.ts',
   output: {
     filename: 'dist/bundle.js'
@@ -23,9 +22,5 @@ module.exports = {
       filename: 'index.html',
       template: '!!ejs-compiled-loader!src/assets/index.ejs'
     })
-  ],
-  devServer: {
-    historyApiFallback: true,
-    contentBase: 'dist'
-  }
+  ]
 };
