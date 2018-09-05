@@ -24,7 +24,7 @@ const countUpController: ICountUpController = {
     },
 
     __ready(context: IContext) {
-        $(this.rootElement).append(counterTemplate());
+        $(this.rootElement!).append(counterTemplate());
     },
 };
 

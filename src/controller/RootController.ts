@@ -20,7 +20,7 @@ const rootController: IRootController = {
     _countUpController: countUpController,
     _resetController: resetController,
 
-    '{rootElement} resetCount'(context: IContext, $el: JQuery<HTMLElement>) {
+    '{rootElement} resetCount'(context?: IContext, $el?: JQuery<HTMLElement>) {
         this._countUpController.reset();
     },
 };

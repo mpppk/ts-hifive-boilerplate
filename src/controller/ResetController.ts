@@ -14,7 +14,7 @@ const resetController: IResetController = {
     },
 
     __ready() {
-        $(this.rootElement).append(resetTemplate());
+        $(this.rootElement!).append(resetTemplate());
     },
 };
 
