@@ -22,9 +22,9 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ .Branch }}-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-{{ .Branch }}
+            - v1-dependencies-{{ .Branch }}-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-{{ .Branch }}
 
       - run: npm install
 
@@ -35,5 +35,5 @@ jobs:
 
       # run tests!
       - run: npm run lint
-      - run: npm test
       - run: npm run build
+      - run: npm codecov
