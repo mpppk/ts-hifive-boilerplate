@@ -8,6 +8,7 @@
     "build:dev": "webpack",
     "watch": "webpack --watch",
     "test": "jest",
+    "codecov": "npm run test && codecov",
     "doc": "typedoc --out ./docs -m \"amd\"",
     "start": "webpack-dev-server",
     "lint": "npm run pretty-quick && tslint -c tslint.json 'src/**/*.ts' 'src/**/*.tsx' 'test/**/*.ts' --fix",
@@ -30,7 +31,9 @@
     },
     "testMatch": [
       "**/__tests__/*.+(ts|tsx|js)"
-    ]
+    ],
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   },
   "keywords": [],
   "author": "mpppk",
@@ -40,6 +43,7 @@
     "@types/jquery": "^3.3.6",
     "@types/mocha": "^2.2.41",
     "@types/node": "^10.0.3",
+    "codecov": "^3.1.0",
     "ejs-compiled-loader": "^1.1.0",
     "html-webpack-plugin": "^3.0.0",
     "husky": "^0.14.3",
