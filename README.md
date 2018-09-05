@@ -2,7 +2,8 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/mpppk/ts-hifive-boilerplate.svg)](https://greenkeeper.io/)
 [![CircleCI](https://circleci.com/gh/mpppk/ts-hifive-boilerplate.svg?style=svg)](https://circleci.com/gh/mpppk/ts-hifive-boilerplate)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d61a377f52014846a97181b151cc5e6a)](https://www.codacy.com/app/niboshiporipori/ts-hifive-boilerplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mpppk/ts-hifive-boilerplate&amp;utm_campaign=Badge_Grade)
+[![codebeat badge](https://codebeat.co/badges/dee29821-d6e9-434c-9388-c338cba3e0f4)](https://codebeat.co/projects/github-com-mpppk-ts-hifive-boilerplate-master)
+[![codecov](https://codecov.io/gh/mpppk/ts-hifive-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/mpppk/ts-hifive-boilerplate)
 
 ### GitLab Badges
 
@@ -17,18 +18,20 @@ $ npm install
 ```
 
 ## Usage
+
 ### Start server for development
 
 ```Shell
 $ npm start
 ```
 
-`npm start` serve your application on `http://localhost:8080` and updates the browser on changes.    
+`npm start` serve your application on `http://localhost:8080` and updates the browser on changes.
 
 ![](imgs/webpack-dev-server.png)
 
 #### Ref
-* [webpack-dev-server](https://github.com/webpack/webpack-dev-server)  
+
+- [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
 
 ### Testing
 
@@ -36,18 +39,13 @@ $ npm start
 $ npm test
 ```
 
-`npm test` execute the test of `test/**/*.ts` and output the coverage.
+`npm test` execute the test of `__tests__/**/*.ts` and output the coverage.
 
 ![](imgs/test_and_coverage.png)
 
-If test failed, detailed error message will be displayed.
-
-![](imgs/test_fail.png)
-
 #### Ref
-* [mocha](https://mochajs.org)
-* [nyc](https://github.com/istanbuljs/nyc)
-* [power-assert](https://github.com/power-assert-js/power-assert)
+
+- [jest](https://jestjs.io)
 
 ### Linting
 
@@ -60,7 +58,8 @@ $ npm run lint
 ![](imgs/tslint.png)
 
 #### Ref
-* [tslint](https://palantir.github.io/tslint/)
+
+- [tslint](https://palantir.github.io/tslint/)
 
 ### Generate Documentation
 
@@ -75,7 +74,8 @@ $ npm run doc
 ![](imgs/tsdoc.png)
 
 #### Ref
-* [typedoc](https://github.com/TypeStrong/typedoc)
+
+- [typedoc](https://github.com/TypeStrong/typedoc)
 
 ## Docker
 
@@ -86,18 +86,20 @@ $ docker run -it -p 8080:8080 tshifive
 ```
 
 ## Tools
-* editorconfig
+
+- editorconfig
+- prettier
 
 ## SaaS Integration
+
 ### Circle CI
 
-![](imgs/circle_ci.png)
+![https://codecov.io](imgs/circle_ci.png)
 
-### Codacy
-
-![](imgs/codacy.png)
+### [CodeCov]()
 
 ## GitLab Integration
-* GitLab CI & Coverage
+
+- GitLab CI & Coverage
 
 ![](imgs/gitlab_ci.png)
