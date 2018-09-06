@@ -1,5 +1,5 @@
 import { EventCallback, IContext } from '../h5/IContext';
-import { IController } from '../h5/IController';
+import { IController, IPartialController } from '../h5/IController';
 import countUpController, { ICountUpController } from './CountUpController';
 import resetController, { IResetController } from './ResetController';
 
@@ -10,6 +10,7 @@ interface IRootController extends IController {
 }
 
 const rootController: IRootController = {
+  ...({} as IPartialController),
   __meta: {
     _countUpController: {
       rootElement: '#counterContainer'

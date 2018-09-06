@@ -1,5 +1,5 @@
 import { EventCallback, IContext } from '../h5/IContext';
-import { IController } from '../h5/IController';
+import { IController, IPartialController } from '../h5/IController';
 import Counter from '../service/Counter';
 const counterTemplate: (o?: object) => string = require('../assets/counter.ejs'); // tslint:disable-line no-var-requires
 
@@ -10,6 +10,7 @@ export interface ICountUpController extends IController {
 }
 
 const countUpController: ICountUpController = {
+  ...({} as IPartialController),
   __name: 'countUpController',
   _counter: new Counter(),
 
@@ -24,7 +25,7 @@ const countUpController: ICountUpController = {
   },
 
   __ready(_context: IContext) {
-    $(this.rootElement!).append(counterTemplate());
+    $(this.rootElement).append(counterTemplate());
   }
 };
 
