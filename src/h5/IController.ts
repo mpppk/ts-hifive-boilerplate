@@ -1,10 +1,14 @@
-import { IContext } from './IContext';
+import { EventHandler, IContext } from './IContext';
 
-export interface IController extends IPartialController {
+export type Controllization<T extends IControllerObject> = T &
+  Partial<IControllerProps> &
+  ThisType<T & IControllerProps>;
+
+export interface IControllerObject {
   __name: string;
 }
 
-export interface IPartialController {
+export interface IControllerProps {
   __meta: { [key: string]: IMetaControllerParams };
   __construct: (context: IContext) => void;
   __init: (context: IContext) => void;
@@ -18,3 +22,5 @@ export interface IMetaControllerParams {
   rootElement?: string | HTMLElement;
   useHandlers?: boolean;
 }
+
+export type EventHandlers<T extends string> = { [U in T]: EventHandler };

@@ -1,24 +1,24 @@
-import { EventCallback, IContext } from '../h5/IContext';
-import { IController, IPartialController } from '../h5/IController';
-import countUpController, { ICountUpController } from './CountUpController';
-import resetController, { IResetController } from './ResetController';
+import { IContext } from '../h5/IContext';
+import { Controllization, EventHandlers, IControllerObject } from '../h5/IController';
+import { countUpController } from './CountUpController';
+import resetController from './ResetController';
 
-interface IRootController extends IController {
-  _countUpController: ICountUpController;
-  _resetController: IResetController;
-  '{rootElement} resetCount': EventCallback;
-}
+type IRootControllerObject = typeof childControllers & IControllerObject & RootControllerEventHandlers;
+type RootControllerEventHandlers = EventHandlers<'{rootElement} resetCount'>;
 
-const rootController: IRootController = {
-  ...({} as IPartialController),
+const childControllers = {
+  _countUpController: countUpController,
+  _resetController: resetController
+};
+
+const rootController: Controllization<IRootControllerObject> = {
+  ...childControllers,
   __meta: {
     _countUpController: {
       rootElement: '#counterContainer'
     }
   },
   __name: 'rootController',
-  _countUpController: countUpController,
-  _resetController: resetController,
 
   '{rootElement} resetCount'(_context?: IContext, _$el?: JQuery<HTMLElement>) {
     this._countUpController.reset();
