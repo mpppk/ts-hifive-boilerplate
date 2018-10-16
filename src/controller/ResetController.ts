@@ -1,13 +1,9 @@
-import { EventCallback } from '../h5/IContext';
-import { IController, IPartialController } from '../h5/IController';
+import { Controllization } from '../h5/IController';
 const resetTemplate: (o?: object) => string = require('../assets/reset.ejs'); // tslint:disable-line no-var-requires
 
-export interface IResetController extends IController {
-  '#resetBtn click': EventCallback;
-}
+type EventSelector = '#resetBtn click';
 
-const resetController: IResetController = {
-  ...({} as IPartialController),
+const resetController: Controllization<{}, EventSelector> = {
   __name: 'resetController',
 
   '#resetBtn click'() {
