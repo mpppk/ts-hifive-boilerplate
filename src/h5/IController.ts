@@ -1,8 +1,9 @@
 import { EventHandler, IContext } from './IContext';
 
-export type Controllization<T extends IControllerObject> = T &
+export type Controllization<T extends IControllerObject, U extends string> = T &
   Partial<IControllerProps> &
-  ThisType<T & IControllerProps>;
+  ThisType<T & IControllerProps> &
+  { [K in U]: EventHandler };
 
 export interface IControllerObject {
   __name: string;
