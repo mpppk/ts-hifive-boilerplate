@@ -1,11 +1,9 @@
-import { Controllization, IControllerObject, IControllerProps } from '../h5/IController';
+import { Controllization } from '../h5/IController';
 const resetTemplate: (o?: object) => string = require('../assets/reset.ejs'); // tslint:disable-line no-var-requires
 
-type ResetControllerEventSelectors = '#resetBtn click';
-type ResetControllerObject = IControllerObject;
+type EventSelector = '#resetBtn click';
 
-const resetController: Controllization<ResetControllerObject, ResetControllerEventSelectors> = {
-  ...({} as IControllerProps),
+const resetController: Controllization<{}, EventSelector> = {
   __name: 'resetController',
 
   '#resetBtn click'() {

@@ -1,19 +1,16 @@
 import { IContext } from '../h5/IContext';
-import { Controllization, EventHandlers, IControllerObject } from '../h5/IController';
+import { Controllization } from '../h5/IController';
 import { countUpController } from './CountUpController';
 import resetController from './ResetController';
 
-type RootControllerEventSelectors = '{rootElement} resetCount';
-type IRootControllerObject = typeof childControllers & IControllerObject & RootControllerEventHandlers;
-type RootControllerEventHandlers = EventHandlers<'{rootElement} resetCount'>;
-
-const childControllers = {
+type EventSelector = '{rootElement} resetCount';
+const props = {
   _countUpController: countUpController,
   _resetController: resetController
 };
 
-const rootController: Controllization<IRootControllerObject, RootControllerEventSelectors> = {
-  ...childControllers,
+const rootController: Controllization<typeof props, EventSelector> = {
+  ...props,
   __meta: {
     _countUpController: {
       rootElement: '#counterContainer'

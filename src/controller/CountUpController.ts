@@ -1,18 +1,20 @@
 import { IContext } from '../h5/IContext';
-import { Controllization, IControllerObject } from '../h5/IController';
+import { Controllization } from '../h5/IController';
 import Counter from '../service/Counter';
 const counterTemplate: (o?: object) => string = require('../assets/counter.ejs'); // tslint:disable-line no-var-requires
 
-interface ICountUp extends IControllerObject {
-  _counter: Counter;
+type CountUpControllerProps = typeof props & {
   reset: () => void;
-}
+};
 
-type CountUpControllerEventSelectors = '#countUpBtn click';
-export const countUpController: Controllization<ICountUp, CountUpControllerEventSelectors> = {
+const props = {
+  _counter: new Counter()
+};
+
+type EventSelector = '#countUpBtn click';
+export const countUpController: Controllization<CountUpControllerProps, EventSelector> = {
   __name: 'countUpController',
-  _counter: new Counter(),
-
+  ...props,
   '#countUpBtn click'() {
     this._counter.increment();
     alert(this._counter.count);

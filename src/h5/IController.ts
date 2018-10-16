@@ -1,15 +1,17 @@
 import { EventHandler, IContext } from './IContext';
 
-export type Controllization<T extends IControllerObject, U extends string> = T &
+type ControllerObject<T, U extends string> = T & IControllerObject & EventHandlers<U>;
+export type Controllization<T, U extends string> = ControllerObject<T, U> &
   Partial<IControllerProps> &
-  ThisType<T & IControllerProps> &
-  { [K in U]: EventHandler };
+  ThisType<ControllerObject<T, U> & IControllerProps>;
 
-export interface IControllerObject {
+interface IControllerObject {
   __name: string;
 }
 
-export interface IControllerProps {
+type EventHandlers<T extends string> = { [K in T]: EventHandler };
+
+interface IControllerProps {
   __meta: { [key: string]: IMetaControllerParams };
   __construct: (context: IContext) => void;
   __init: (context: IContext) => void;
@@ -23,5 +25,3 @@ export interface IMetaControllerParams {
   rootElement?: string | HTMLElement;
   useHandlers?: boolean;
 }
-
-export type EventHandlers<T extends string> = { [U in T]: EventHandler };
