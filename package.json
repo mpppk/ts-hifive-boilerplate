@@ -62,6 +62,6 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
-    "ejs": "^2.6.1"
+    "ejs": "^3.0.0"
   }
 }
