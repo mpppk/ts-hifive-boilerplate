@@ -54,7 +54,7 @@
     "ts-loader": "4.5.0",
     "tslint": "5.20.0",
     "tslint-config-prettier": "1.18.0",
-    "typedoc": "0.16.8",
+    "typedoc": "0.16.9",
     "typescript": "3.7.5",
     "webpack": "4.41.5",
     "webpack-cli": "3.3.10",
