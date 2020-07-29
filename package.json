@@ -40,7 +40,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "23.3.14",
-    "@types/jquery": "3.5.0",
+    "@types/jquery": "3.5.1",
     "@types/node": "10.17.28",
     "codecov": "3.7.2",
     "ejs-compiled-loader": "1.1.0",
