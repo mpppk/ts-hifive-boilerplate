@@ -51,7 +51,7 @@
     "pretty-quick": "1.11.1",
     "source-map-support": "0.5.19",
     "ts-jest": "23.10.5",
-    "ts-loader": "4.5.0",
+    "ts-loader": "8.0.16",
     "tslint": "5.20.1",
     "tslint-config-prettier": "1.18.0",
     "typedoc": "0.20.23",
